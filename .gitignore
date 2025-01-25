@@ -1,0 +1,14 @@
+# Ignore compiled binaries
+*.exe
+*.o
+*.out
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+
+# Ignore other generated files
+*.log
+
+# Ignore notes
+notes.txt
