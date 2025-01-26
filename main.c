@@ -2,10 +2,10 @@
 #include <stdbool.h>
 #include "parsexec.h"
 
-char input[30] = "go forward"; // string buffer
+char input[30]; // string buffer
 
 // Horizontal line
-void printSeparator()
+static void printSeparator()
 {
     printf("------------------------------------------------------------------------------------------------------------------------\n");
 }
