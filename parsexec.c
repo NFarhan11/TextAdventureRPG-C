@@ -2,11 +2,12 @@
 #include <stdbool.h>
 #include <string.h>
 #include "parsexec.h"
+#include "location.h"
 
 bool parseAndExecute(char *input)
 {
     char *verb = strtok(input, " \n");
-    char *noun = strtok(NULL, " ");
+    char *noun = strtok(NULL, " \n");
 
     if (verb != NULL)
     {
@@ -14,9 +15,13 @@ bool parseAndExecute(char *input)
         {
             return false;
         }
+        else if (strcmp(verb, "look") == 0)
+        {
+            toLook(noun);
+        }
         else if (strcmp(verb, "go") == 0)
         {
-            printf("You go forward to that place.\n");
+            toGo(noun);
         }
         else if (strcmp(verb, "use") == 0)
         {
