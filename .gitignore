@@ -12,3 +12,6 @@
 
 # Ignore notes
 notes.txt
+
+# Ignore test
+test.c
