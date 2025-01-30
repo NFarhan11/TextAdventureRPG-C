@@ -3,6 +3,8 @@
 #include <string.h>
 #include "parsexec.h"
 #include "location.h"
+#include "inventory.h"
+#include "unit.h"
 
 bool parseAndExecute(char *input)
 {
@@ -34,11 +36,23 @@ bool parseAndExecute(char *input)
             // pick up the object(noun) in the current location
             toPick(noun);
         }
+        // DROP
+        else if (strcmp(verb, "drop") == 0)
+        {
+            // drop the object(noun) in the current location
+            toDrop(noun);
+        }
         // USE
         else if (strcmp(verb, "use") == 0)
         {
             // use the object(noun)
             printf("You use a %s.\n", noun);
+        }
+        // INVENTORY
+        else if (strcmp(verb, "inventory") == 0)
+        {
+            // check the inventory
+            checkInventory(&player->inv);
         }
         // UNKNOWN
         else

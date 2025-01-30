@@ -4,10 +4,10 @@
 
 // array of objects
 object objects[] = {
-    {"dagger", "A sharp dagger", &locations[0]},
-    {"sword", "A shining sword", &locations[0]},
-    {"shield", "A sturdy shield", &locations[2]},
-    {"potion", "A glowing potion", &locations[3]},
+    {"dagger", "a sharp dagger", &locations[1]},
+    {"sword", "a shining sword", &locations[1]},
+    {"shield", "a sturdy shield", &locations[2]},
+    {"potion", "a glowing potion", &locations[3]},
 };
 
 // object count

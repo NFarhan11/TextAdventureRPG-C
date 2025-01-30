@@ -2,6 +2,8 @@
 #include <stdbool.h>
 #include "parsexec.h"
 #include "location.h"
+#include "inventory.h"
+#include "unit.h"
 
 char input[30]; // string buffer
 
@@ -20,8 +22,6 @@ static bool getInput(void)
 
 int main()
 {
-    // setup
-    current_location = 0; // initial location
 
     printSeparator();
     printf("Welcome to the Garrison Frontier.\n");
@@ -30,7 +30,7 @@ int main()
     printSeparator();
 
     // initial current location
-    printf("You are at %s\n", locations[current_location].description);
+    printf("You are at %s\n", player->current_location->description);
 
     // Game Loop
     bool run;
