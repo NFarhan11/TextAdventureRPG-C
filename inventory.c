@@ -12,11 +12,11 @@ void toInventory(inventory *inv, object *item)
         inv->items[inv->object_count] = item;
         inv->object_count++;
         item->current_location = NULL;
-        printf("You have picked up %s.\n", item->description);
+        printf("\nYou have picked up %s.\n", item->description);
     }
     else
     {
-        printf("Your inventory is full.\n");
+        printf("\nYour inventory is full.\n");
     }
 }
 
@@ -25,11 +25,11 @@ void checkInventory(inventory *inv)
     // if the inventory is empty
     if (inv->object_count == 0)
     {
-        printf("Your inventory is empty.\n");
+        printf("\nYour inventory is empty.\n");
     }
     else
     {
-        printf("Your inventory contains:\n");
+        printf("\nYour inventory contains:\n");
         for (int i = 0; i < inv->object_count; i++)
         {
             printf("%s\n", inv->items[i]->tag);
@@ -56,7 +56,7 @@ void dropFromInventory(inventory *inv, object *item)
             inv->object_count--;
 
             // print drop
-            printf("You have dropped %s.\n", item->description);
+            printf("\nYou have dropped %s.\n", item->description);
             return;
         }
     }
@@ -64,6 +64,6 @@ void dropFromInventory(inventory *inv, object *item)
     // no item in inventory
     if (inv->object_count == 0)
     {
-        printf("Your inventory is empty\n");
+        printf("\nYour inventory is empty\n");
     }
 }

@@ -22,7 +22,6 @@ static bool getInput(void)
 
 int main()
 {
-
     printSeparator();
     printf("Welcome to the Garrison Frontier.\n");
     printf("A battle frontier for the adventurer to explore the dungeon.\n");
@@ -30,7 +29,8 @@ int main()
     printSeparator();
 
     // initial current location
-    printf("You are at %s\n", player->current_location->description);
+    initializeMap();
+    printf("\nYou are at %s\n", player->current_location->description);
 
     // Game Loop
     bool run;
